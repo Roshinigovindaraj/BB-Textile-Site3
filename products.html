@@ -1,0 +1,1365 @@
+<!DOCTYPE html>
+<html lang="ta">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>காஞ்சிபுரம் பட்டு சேலைகள் - அருள் சில்க்ஸ்</title>
+  <meta name="description"
+    content="உயர்தர காஞ்சிபுரம் பட்டு கொண்டு நெய்யப்பட்ட அழகிய சேலைகள். பாரம்பரியம் மற்றும் நவீன அழகின் சரியான கலவை." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@300;400;500;600;700;800;900&family=Noto+Serif+Tamil:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <style>
+    /* =====================
+       ROOT VARIABLES
+       ===================== */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --gold: #b8860b;
+      --gold-light: #d4a017;
+      --gold-pale: #c9a84c;
+      --gold-bg: #fdf6e3;
+      --gold-bg2: #fef9ed;
+      --cream: #fffdf5;
+      --cream2: #faf5e4;
+      --brown: #5a3e1b;
+      --text-dark: #2d1f0e;
+      --text-mid: #5a3e1b;
+      --text-light: #8a6a3a;
+      --border: #e8d5a0;
+      --white: #ffffff;
+      --shadow: 0 4px 24px rgba(184, 134, 11, 0.10);
+      --shadow-hover: 0 8px 36px rgba(184, 134, 11, 0.22);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Noto Sans Tamil', 'Noto Serif Tamil', sans-serif;
+      background: var(--cream);
+      color: var(--text-dark);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* =====================
+       ANNOUNCEMENT BAR
+       ===================== */
+    .announcement-bar {
+      background: var(--gold-bg);
+      border-bottom: 1px solid var(--border);
+      padding: 6px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.78rem;
+      color: var(--text-mid);
+      gap: 12px;
+    }
+
+    .announce-left {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 500;
+    }
+
+    .announce-left svg {
+      flex-shrink: 0;
+    }
+
+    .announce-right {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .announce-right a {
+      color: var(--text-mid);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      transition: color 0.2s;
+      font-size: 0.78rem;
+    }
+
+    .announce-right a:hover {
+      color: var(--gold);
+    }
+
+    /* =====================
+       HEADER
+       ===================== */
+    .header {
+      background: var(--white);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 16px rgba(184, 134, 11, 0.10);
+    }
+
+    .header-inner {
+      width: 100%;
+      padding: 0 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+      gap: 24px;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+
+    .logo-name {
+      font-family: 'Noto Serif Tamil', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--gold);
+      letter-spacing: 0.01em;
+    }
+
+    .logo-tagline {
+      font-size: 0.62rem;
+      color: var(--text-light);
+      letter-spacing: 0.06em;
+    }
+
+    /* NAV */
+    .navbar {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      min-width: 0;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 0;
+      flex-wrap: nowrap;
+    }
+
+    .nav-link {
+      display: block;
+      padding: 24px 14px;
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--text-dark);
+      text-decoration: none;
+      position: relative;
+      transition: color 0.2s;
+      white-space: nowrap;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 8px;
+      left: 50%;
+      width: 32px;
+      height: 3px;
+      background: var(--gold);
+      transform: translateX(-50%) scaleX(0);
+      transform-origin: center;
+      transition: transform 0.25s ease;
+      border-radius: 2px;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--gold);
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      transform: translateX(-50%) scaleX(1);
+    }
+
+    .nav-link.active {
+      font-weight: 600;
+    }
+
+    /* Dropdown */
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: calc(100% + 4px);
+      left: 0;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      box-shadow: var(--shadow-hover);
+      min-width: 180px;
+      list-style: none;
+      padding: 8px 0;
+      z-index: 100;
+    }
+
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+
+    .dropdown-menu li a {
+      display: block;
+      padding: 8px 18px;
+      font-size: 0.88rem;
+      color: var(--text-mid);
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .dropdown-menu li a:hover {
+      background: var(--gold-bg);
+      color: var(--gold);
+    }
+
+    .arrow {
+      font-size: 0.72rem;
+      margin-left: 2px;
+    }
+
+    /* Header Actions */
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+      justify-content: flex-end;
+    }
+
+    .header-actions button,
+    .header-actions a {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--text-mid);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      text-decoration: none;
+      font-size: 0.82rem;
+      transition: color 0.2s;
+      padding: 4px;
+      position: relative;
+    }
+
+    .header-actions button:hover,
+    .header-actions a:hover {
+      color: var(--gold);
+    }
+
+    .cart-badge {
+      position: absolute;
+      top: -4px;
+      right: -6px;
+      background: var(--gold);
+      color: white;
+      border-radius: 50%;
+      width: 16px;
+      height: 16px;
+      font-size: 0.65rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+    }
+
+    .phone-link {
+      font-size: 0.76rem;
+      color: var(--gold) !important;
+      font-weight: 600;
+      border-left: 1px solid var(--border);
+      padding-left: 10px;
+      white-space: nowrap;
+    }
+
+    /* =====================
+       HERO BANNER
+       ===================== */
+    .product-hero {
+      background-image: url('t6.png');
+      background-size: cover;
+      background-position: center top;
+      background-repeat: no-repeat;
+      min-height: 280px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 40px 0;
+    }
+
+    .product-hero-content {
+      width: 42%;
+      padding: 0 24px 0 48px;
+    }
+
+    .product-hero *,
+    .product-hero *:link,
+    .product-hero *:visited {
+      text-decoration: none !important;
+      -webkit-text-decoration: none !important;
+    }
+
+    .product-hero-title {
+      font-family: 'Noto Serif Tamil', serif;
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      font-weight: 700;
+      color: #2d1f0e !important;
+      line-height: 1.3;
+      margin-bottom: 14px;
+      text-decoration: none !important;
+    }
+
+    .product-hero-desc {
+      font-size: 0.90rem;
+      color: #5a3e1b !important;
+      line-height: 1.8;
+      text-decoration: none !important;
+    }
+
+    /* =====================
+       BREADCRUMB
+       ===================== */
+    .breadcrumb {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 10px 0;
+    }
+
+    .breadcrumb-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.80rem;
+      color: var(--text-light);
+    }
+
+    .breadcrumb-inner a {
+      color: var(--text-light);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .breadcrumb-inner a:hover {
+      color: var(--gold);
+    }
+
+    .breadcrumb-sep {
+      color: var(--border);
+    }
+
+    .breadcrumb-current {
+      color: var(--text-mid);
+      font-weight: 500;
+    }
+
+    /* =====================
+       MAIN LAYOUT
+       ===================== */
+    .shop-main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 28px 24px;
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    /* =====================
+       FILTER SIDEBAR
+       ===================== */
+    .filter-sidebar {
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 18px;
+      position: sticky;
+      top: 80px;
+    }
+
+    .filter-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .filter-title svg {
+      color: var(--gold);
+    }
+
+    .filter-section {
+      margin-bottom: 20px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .filter-section:last-of-type {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .filter-section-label {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--text-mid);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .filter-section-label .filter-deco {
+      width: 24px;
+      height: 2px;
+      background: var(--gold-pale);
+      border-radius: 2px;
+    }
+
+    /* Radio filters */
+    .filter-options {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .filter-option {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.82rem;
+      color: var(--text-mid);
+      cursor: pointer;
+    }
+
+    .filter-option input[type="radio"] {
+      accent-color: var(--gold);
+      cursor: pointer;
+    }
+
+    .filter-option:hover {
+      color: var(--gold);
+    }
+
+    /* Color swatches */
+    .color-swatches {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .color-swatch {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .color-swatch:hover,
+    .color-swatch.active {
+      border-color: var(--gold);
+      transform: scale(1.15);
+    }
+
+    /* Price Range */
+    .price-range-labels {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.75rem;
+      color: var(--text-light);
+      margin-bottom: 8px;
+    }
+
+    .price-slider {
+      width: 100%;
+      -webkit-appearance: none;
+      appearance: none;
+      height: 4px;
+      border-radius: 4px;
+      background: linear-gradient(to right, var(--gold) 40%, var(--border) 40%);
+      outline: none;
+    }
+
+    .price-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--gold);
+      cursor: pointer;
+      border: 2px solid white;
+      box-shadow: 0 2px 6px rgba(184, 134, 11, 0.3);
+    }
+
+    /* Availability */
+    .avail-option {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.82rem;
+      color: var(--text-mid);
+      cursor: pointer;
+    }
+
+    .avail-option input[type="checkbox"] {
+      accent-color: var(--gold);
+      cursor: pointer;
+    }
+
+    .avail-count {
+      margin-left: auto;
+      font-size: 0.72rem;
+      color: var(--text-light);
+      background: var(--gold-bg);
+      border-radius: 20px;
+      padding: 1px 7px;
+    }
+
+    /* Clear Filters Button */
+    .btn-clear-filters {
+      display: block;
+      width: 100%;
+      margin-top: 16px;
+      padding: 9px 0;
+      border: 1.5px solid var(--gold-pale);
+      background: transparent;
+      color: var(--gold);
+      border-radius: 6px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: 'Noto Sans Tamil', sans-serif;
+      transition: all 0.25s;
+    }
+
+    .btn-clear-filters:hover {
+      background: var(--gold);
+      color: white;
+      border-color: var(--gold);
+    }
+
+    /* =====================
+       PRODUCTS PANEL
+       ===================== */
+    .products-panel {
+      min-width: 0;
+    }
+
+    .products-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .products-title {
+      font-family: 'Noto Serif Tamil', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+
+    .products-meta {
+      font-size: 0.80rem;
+      color: var(--text-light);
+      margin-top: 2px;
+    }
+
+    .sort-select {
+      padding: 7px 30px 7px 12px;
+      border: 1.5px solid var(--border);
+      border-radius: 6px;
+      background: var(--white);
+      color: var(--text-mid);
+      font-size: 0.82rem;
+      font-family: 'Noto Sans Tamil', sans-serif;
+      cursor: pointer;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%238a6a3a' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 10px center;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .sort-select:focus {
+      border-color: var(--gold-pale);
+    }
+
+    /* Title deco */
+    .section-deco {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+
+    .deco-line-sm {
+      width: 36px;
+      height: 1.5px;
+      background: linear-gradient(to right, transparent, var(--gold-pale));
+      border-radius: 2px;
+    }
+
+    .deco-line-sm.left {
+      background: linear-gradient(to left, transparent, var(--gold-pale));
+    }
+
+    /* Products Grid */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .product-card {
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .product-card:hover {
+      border-color: var(--gold-pale);
+      transform: translateY(-4px);
+      animation: gold-glow-pulse 1.8s infinite ease-in-out;
+    }
+
+    @keyframes gold-glow-pulse {
+      0% {
+        box-shadow: 0 4px 20px rgba(184, 134, 11, 0.15);
+      }
+
+      50% {
+        box-shadow: 0 8px 32px rgba(184, 134, 11, 0.5), 0 0 12px rgba(212, 160, 23, 0.45);
+      }
+
+      100% {
+        box-shadow: 0 4px 20px rgba(184, 134, 11, 0.15);
+      }
+    }
+
+    .product-img-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 3/4;
+      overflow: hidden;
+    }
+
+    .product-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .product-card:hover .product-img-wrap img {
+      transform: scale(1.06);
+    }
+
+    .wishlist-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: rgba(255, 255, 255, 0.90);
+      border: none;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+      z-index: 2;
+      backdrop-filter: blur(4px);
+    }
+
+    .wishlist-btn:hover {
+      background: var(--white);
+      transform: scale(1.15);
+    }
+
+    .wishlist-btn svg {
+      color: var(--text-light);
+      transition: color 0.2s;
+    }
+
+    .wishlist-btn:hover svg {
+      color: #e05c5c;
+    }
+
+    .wishlist-btn.active svg {
+      color: #e05c5c;
+      fill: #e05c5c;
+    }
+
+    .product-info {
+      padding: 12px 12px 14px;
+    }
+
+    .product-name {
+      font-size: 0.80rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      line-height: 1.35;
+      margin-bottom: 6px;
+      min-height: 2.4em;
+    }
+
+    .product-price {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 10px;
+      font-family: 'Noto Serif Tamil', serif;
+    }
+
+    .btn-add-cart {
+      display: block;
+      width: 100%;
+      padding: 8px 0;
+      background: linear-gradient(135deg, var(--gold-light) 0%, #9a7009 100%);
+      color: var(--white);
+      border: none;
+      border-radius: 5px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+      font-family: 'Noto Sans Tamil', sans-serif;
+      transition: all 0.25s ease;
+      letter-spacing: 0.02em;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-add-cart::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: left 0.4s ease;
+    }
+
+    .btn-add-cart:hover::before {
+      left: 100%;
+    }
+
+    .btn-add-cart:hover {
+      background: linear-gradient(135deg, #d4a017 0%, #b8860b 100%);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 14px rgba(184, 134, 11, 0.35);
+    }
+
+    /* =====================
+       BOTTOM FEATURES BAR
+       ===================== */
+    .features-bar {
+      background: var(--white);
+      border-top: 1px solid var(--border);
+      padding: 28px 0;
+      margin-top: 8px;
+    }
+
+    .features-bar-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      text-align: center;
+    }
+
+    .feat-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .feat-icon {
+      width: 48px;
+      height: 48px;
+      border: 2px solid var(--border);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      transition: all 0.3s ease;
+    }
+
+    .feat-item:hover .feat-icon {
+      border-color: var(--gold);
+      background: var(--gold-bg);
+      transform: scale(1.1);
+    }
+
+    .feat-label {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      line-height: 1.3;
+    }
+
+    .feat-sublabel {
+      font-size: 0.72rem;
+      color: var(--text-light);
+      line-height: 1.4;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== ANNOUNCEMENT BAR ===== -->
+  <div class="announcement-bar" id="announce-bar">
+    <div class="announce-left">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <rect x="1" y="3" width="15" height="13" rx="2" />
+        <path d="M16 8h4l3 5v3h-7V8z" />
+        <circle cx="5.5" cy="18.5" r="2.5" />
+        <circle cx="18.5" cy="18.5" r="2.5" />
+      </svg>
+      ₹5000க்கு மேல் ஆர்டர்களுக்கு இலவச டெலிவரி
+    </div>
+    <div class="announce-right">
+      <a href="#" id="nav-account-link">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+          <circle cx="12" cy="7" r="4" />
+        </svg>
+        ஆர்டர் கண்காணிக்க
+      </a>
+      <a href="#" id="nav-wishlist-link">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path
+            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+        </svg>
+        விருப்பப்பட்டியல்
+      </a>
+      <a href="#" id="nav-login-link">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+          <polyline points="10 17 15 12 10 7" />
+          <line x1="15" y1="12" x2="3" y2="12" />
+        </svg>
+        உள்நுழைய / புதிய செய்ய
+      </a>
+    </div>
+  </div>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="site-header">
+    <div class="header-inner">
+      <!-- Logo -->
+      <a href="index.html" class="logo-area" id="logo-link">
+        <div class="logo-icon">
+          <svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" width="40" height="40">
+            <circle cx="25" cy="25" r="22" stroke="#b8860b" stroke-width="1.5" fill="none" />
+            <ellipse cx="25" cy="15" rx="4" ry="8" fill="#c9a84c" opacity="0.8" />
+            <ellipse cx="25" cy="15" rx="4" ry="8" fill="#c9a84c" opacity="0.8" transform="rotate(45 25 25)" />
+            <ellipse cx="25" cy="15" rx="4" ry="8" fill="#c9a84c" opacity="0.8" transform="rotate(90 25 25)" />
+            <ellipse cx="25" cy="15" rx="4" ry="8" fill="#c9a84c" opacity="0.8" transform="rotate(135 25 25)" />
+            <ellipse cx="25" cy="15" rx="4" ry="8" fill="#c9a84c" opacity="0.8" transform="rotate(180 25 25)" />
+            <ellipse cx="25" cy="15" rx="4" ry="8" fill="#c9a84c" opacity="0.8" transform="rotate(225 25 25)" />
+            <ellipse cx="25" cy="15" rx="4" ry="8" fill="#c9a84c" opacity="0.8" transform="rotate(270 25 25)" />
+            <ellipse cx="25" cy="15" rx="4" ry="8" fill="#c9a84c" opacity="0.8" transform="rotate(315 25 25)" />
+            <circle cx="25" cy="25" r="6" fill="#b8860b" />
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-name">அருள் சில்க்ஸ்</span>
+          <span class="logo-tagline">பாரம்பரியம் | நேர்மை | நம்பிக்கை</span>
+        </div>
+      </a>
+
+      <!-- Nav -->
+      <nav class="navbar" id="main-navbar">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link" id="nav-home">முகப்பு</a></li>
+          <li><a href="#" class="nav-link" id="nav-new">புதிய வரவுகள்</a></li>
+          <li class="dropdown">
+            <a href="products.html" class="nav-link active" id="nav-sarees">புடவைகள் <span class="arrow">▾</span></a>
+            <ul class="dropdown-menu">
+              <li><a href="products.html">காஞ்சிபுரம் பட்டு</a></li>
+              <li><a href="bridal.html">மணமகள் சேலைகள்</a></li>
+              <li><a href="#">சேலை வகைகள்</a></li>
+              <li><a href="#">டிசைன்கள்</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="nav-link" id="nav-bridal">சேலை வகைகள் <span class="arrow">▾</span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">பட்டு சேலை</a></li>
+              <li><a href="#">சில்க் சேலை</a></li>
+              <li><a href="#">கார்ட்டன் சேலை</a></li>
+            </ul>
+          </li>
+          <li><a href="index.html#about" class="nav-link" id="nav-about">எங்களைப் பற்றி</a></li>
+          <li><a href="index.html#contact" class="nav-link" id="nav-contact">தொடர்பு</a></li>
+        </ul>
+      </nav>
+
+      <!-- Actions -->
+      <div class="header-actions">
+        <button id="search-btn" title="தேடல்">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8" />
+            <path d="M21 21l-4.35-4.35" />
+          </svg>
+        </button>
+        <a href="#" id="wishlist-btn" title="விருப்பப்பட்டியல்" style="position:relative;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path
+              d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+          </svg>
+        </a>
+        <a href="#" id="cart-btn" title="கார்ட்" style="position:relative;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <path d="M16 10a4 4 0 01-8 0" />
+          </svg>
+          <span class="cart-badge">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO BANNER ===== -->
+  <section class="product-hero" id="product-hero">
+    <div class="product-hero-content">
+      <h1 class="product-hero-title">காஞ்சிபுரம் பட்டு சேலைகள்</h1>
+      <p class="product-hero-desc">உயர்தர காஞ்சிபுரம் பட்டு கொண்டு நெய்யப்பட்ட அழகிய சேலைகள். பாரம்பரியம் மற்றும் நவீன அழகின் சரியான கலவையை அனுபவிக்கவும்.</p>
+    </div>
+  </section>
+
+  <!-- ===== BREADCRUMB ===== -->
+  <nav class="breadcrumb" aria-label="breadcrumb" id="breadcrumb">
+    <div class="breadcrumb-inner">
+      <a href="index.html">முகப்பு</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="#">புடவைகள்</a>
+      <span class="breadcrumb-sep">›</span>
+      <span class="breadcrumb-current">காஞ்சிபுரம் பட்டு</span>
+    </div>
+  </nav>
+
+  <!-- ===== SHOP MAIN ===== -->
+  <main class="shop-main" id="shop-main">
+
+    <!-- FILTER SIDEBAR -->
+    <aside class="filter-sidebar" id="filter-sidebar">
+      <div class="filter-title">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3" />
+        </svg>
+        வடிகட்டி
+      </div>
+
+      <!-- Type filter -->
+      <div class="filter-section">
+        <div class="filter-section-label">
+          வகை
+          <div class="filter-deco"></div>
+        </div>
+        <div class="filter-options">
+          <label class="filter-option">
+            <input type="radio" name="saree-type" value="all" checked /> அனைத்து சேலைகள்
+          </label>
+          <label class="filter-option">
+            <input type="radio" name="saree-type" value="traditional" /> பாரம்பரிய சேலைகள்
+          </label>
+          <label class="filter-option">
+            <input type="radio" name="saree-type" value="bridal" /> திருமண சேலைகள்
+          </label>
+          <label class="filter-option">
+            <input type="radio" name="saree-type" value="festival" /> விழா சேலைகள்
+          </label>
+          <label class="filter-option">
+            <input type="radio" name="saree-type" value="soft" /> மென் சில்க் சேலைகள்
+          </label>
+        </div>
+      </div>
+
+      <!-- Color filter -->
+      <div class="filter-section">
+        <div class="filter-section-label">
+          நிறம்
+          <div class="filter-deco"></div>
+        </div>
+        <div class="color-swatches">
+          <div class="color-swatch active" style="background:#c0392b;" title="சிவப்பு"></div>
+          <div class="color-swatch" style="background:#e91e8c;" title="பிங்க்"></div>
+          <div class="color-swatch" style="background:#6a1b9a;" title="ஊதா"></div>
+          <div class="color-swatch" style="background:#1565c0;" title="நீலம்"></div>
+          <div class="color-swatch" style="background:#2e7d32;" title="பச்சை"></div>
+          <div class="color-swatch" style="background:#e65100;" title="ஆரஞ்சு"></div>
+          <div class="color-swatch" style="background:#f57f17;" title="மஞ்சள்"></div>
+          <div class="color-swatch" style="background:#f5f5dc;" title="க்ரீம்" style="border: 1px solid #ddd;"></div>
+          <div class="color-swatch" style="background:#212121;" title="கறுப்பு"></div>
+          <div class="color-swatch" style="background:#5d4037;" title="பழுப்பு"></div>
+        </div>
+      </div>
+
+      <!-- Price filter -->
+      <div class="filter-section">
+        <div class="filter-section-label">
+          விலை
+          <div class="filter-deco"></div>
+        </div>
+        <div class="price-range-labels">
+          <span>₹5,000</span>
+          <span>₹50,000+</span>
+        </div>
+        <input type="range" class="price-slider" id="price-slider" min="5000" max="50000" value="30000" />
+      </div>
+
+      <!-- Availability -->
+      <div class="filter-section">
+        <div class="filter-section-label">
+          கிடைக்கும் நிலை
+          <div class="filter-deco"></div>
+        </div>
+        <label class="avail-option">
+          <input type="checkbox" id="instock-filter" checked />
+          இருப்பில் உள்ளது
+          <span class="avail-count">24</span>
+        </label>
+      </div>
+
+      <button class="btn-clear-filters" id="clear-filters-btn">வடிகட்டிகளை நீக்கு</button>
+    </aside>
+
+    <!-- PRODUCTS PANEL -->
+    <section class="products-panel" id="products-panel">
+      <!-- Header -->
+      <div class="products-header">
+        <div>
+          <h2 class="products-title">காஞ்சிபுரம் பட்டு சேலைகள்</h2>
+          <div class="section-deco">
+            <div class="deco-line-sm left"></div>
+            <svg viewBox="0 0 64 64" width="16" height="16" fill="#c9a84c">
+              <path d="M32 10c-2 6-4 12-4 18 0 6 2 10 4 10s4-4 4-10c0-6-2-12-4-18z" />
+              <path d="M30 28c-4-4-10-6-15-4-5 2-5 7 0 9 5 2 11 0 15-5z" />
+              <path d="M34 28c4-4 10-6 15-4 5 2 5 7 0 9-5 2-11 0-15-5z" />
+            </svg>
+            <div class="deco-line-sm"></div>
+          </div>
+          <p class="products-meta">உயர்தர காஞ்சிபுரம் பட்டு கொண்டு நெய்யப்பட்ட அழகிய சேலைகள்.<br>பாரம்பரியம் மற்றும்
+            நவீன அழகின் சரியான கலவைவை அனுபவிக்கவும்.</p>
+        </div>
+        <select class="sort-select" id="sort-select">
+          <option>சிறந்த விற்பனை</option>
+          <option>விலை: குறைவு → அதிகம்</option>
+          <option>விலை: அதிகம் → குறைவு</option>
+          <option>புதிய வரவுகள்</option>
+        </select>
+      </div>
+
+      <!-- Row 1 -->
+      <div class="products-grid" id="products-grid-1">
+
+        <div class="product-card" id="prod-1">
+          <div class="product-img-wrap">
+            <img src="ts1.jpg" alt="தெஹறதி பச்சை காஞ்சிபுரம் பட்டு சேலை" />
+            <button class="wishlist-btn" id="wish-1" aria-label="விருப்பத்தில் சேர்">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+              </svg>
+            </button>
+          </div>
+          <div class="product-info">
+            <div class="product-name">தெஹறதி பச்சை காஞ்சிபுரம் பட்டு சேலை</div>
+            <div class="product-price">₹18,500</div>
+            <button class="btn-add-cart" id="cart-1">கார்டில் சேர்</button>
+          </div>
+        </div>
+
+        <div class="product-card" id="prod-2">
+          <div class="product-img-wrap">
+            <img src="ts2.jpg" alt="பாரம்பரிய சிவப்பு காஞ்சிபுரம் பட்டு சேலை" />
+            <button class="wishlist-btn" id="wish-2" aria-label="விருப்பத்தில் சேர்">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+              </svg>
+            </button>
+          </div>
+          <div class="product-info">
+            <div class="product-name">பாரம்பரிய சிலப்பு காஞ்சிபுரம் பட்டு சேலை</div>
+            <div class="product-price">₹21,750</div>
+            <button class="btn-add-cart" id="cart-2">கார்டில் சேர்</button>
+          </div>
+        </div>
+
+        <div class="product-card" id="prod-3">
+          <div class="product-img-wrap">
+            <img src="ts3.jpg" alt="ராயல் ஜதா காஞ்சிபுரம் பட்டு சேலை" />
+            <button class="wishlist-btn" id="wish-3" aria-label="விருப்பத்தில் சேர்">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+              </svg>
+            </button>
+          </div>
+          <div class="product-info">
+            <div class="product-name">ராயல் ஜதா காஞ்சிபுரம் பட்டு சேலை</div>
+            <div class="product-price">₹19,900</div>
+            <button class="btn-add-cart" id="cart-3">கார்டில் சேர்</button>
+          </div>
+        </div>
+
+        <div class="product-card" id="prod-4">
+          <div class="product-img-wrap">
+            <img src="ts4.jpg" alt="பீச் பிங்க காஞ்சிபுரம் பட்டு சேலை" />
+            <button class="wishlist-btn" id="wish-4" aria-label="விருப்பத்தில் சேர்">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+              </svg>
+            </button>
+          </div>
+          <div class="product-info">
+            <div class="product-name">பீச் பிங்க காஞ்சிபுரம் பட்டு சேலை</div>
+            <div class="product-price">₹17,800</div>
+            <button class="btn-add-cart" id="cart-4">கார்டில் சேர்</button>
+          </div>
+        </div>
+
+      </div><!-- end grid 1 -->
+
+      <!-- Row 2 -->
+      <div class="products-grid" id="products-grid-2">
+
+        <div class="product-card" id="prod-5">
+          <div class="product-img-wrap">
+            <img src="ts1.jpg" alt="மயில் நீலம் காஞ்சிபுரம் பட்டு சேலை"
+              style="filter: hue-rotate(200deg) saturate(1.3);" />
+            <button class="wishlist-btn" id="wish-5" aria-label="விருப்பத்தில் சேர்">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+              </svg>
+            </button>
+          </div>
+          <div class="product-info">
+            <div class="product-name">மயில் நீலம் காஞ்சிபுரம் பட்டு சேலை</div>
+            <div class="product-price">₹20,600</div>
+            <button class="btn-add-cart" id="cart-5">கார்டில் சேர்</button>
+          </div>
+        </div>
+
+        <div class="product-card" id="prod-6">
+          <div class="product-img-wrap">
+            <img src="ts2.jpg" alt="ராணி பிங்க காஞ்சிபுரம் பட்டு சேலை"
+              style="filter: hue-rotate(310deg) saturate(1.4);" />
+            <button class="wishlist-btn" id="wish-6" aria-label="விருப்பத்தில் சேர்">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+              </svg>
+            </button>
+          </div>
+          <div class="product-info">
+            <div class="product-name">ராணி பிங்க காஞ்சிபுரம் பட்டு சேலை</div>
+            <div class="product-price">₹18,900</div>
+            <button class="btn-add-cart" id="cart-6">கார்டில் சேர்</button>
+          </div>
+        </div>
+
+        <div class="product-card" id="prod-7">
+          <div class="product-img-wrap">
+            <img src="ts3.jpg" alt="கடுகு மஞ்சள் காஞ்சிபுரம் பட்டு சேலை"
+              style="filter: hue-rotate(50deg) saturate(1.5);" />
+            <button class="wishlist-btn" id="wish-7" aria-label="விருப்பத்தில் சேர்">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+              </svg>
+            </button>
+          </div>
+          <div class="product-info">
+            <div class="product-name">கடுகு மஞ்சள் காஞ்சிபுரம் பட்டு சேலை</div>
+            <div class="product-price">₹16,750</div>
+            <button class="btn-add-cart" id="cart-7">கார்டில் சேர்</button>
+          </div>
+        </div>
+
+        <div class="product-card" id="prod-8">
+          <div class="product-img-wrap">
+            <img src="ts4.jpg" alt="எமரால்ட் பச்சை காஞ்சிபுரம் பட்டு சேலை"
+              style="filter: hue-rotate(140deg) saturate(1.3);" />
+            <button class="wishlist-btn" id="wish-8" aria-label="விருப்பத்தில் சேர்">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+              </svg>
+            </button>
+          </div>
+          <div class="product-info">
+            <div class="product-name">எமரால்ட் பச்சை காஞ்சிபுரம் பட்டு சேலை</div>
+            <div class="product-price">₹19,300</div>
+            <button class="btn-add-cart" id="cart-8">கார்டில் சேர்</button>
+          </div>
+        </div>
+
+      </div><!-- end grid 2 -->
+
+    </section>
+  </main>
+
+  <!-- ===== BOTTOM FEATURES BAR ===== -->
+  <div class="features-bar" id="features-bar">
+    <div class="features-bar-inner">
+      <div class="feat-item" id="feat-quality">
+        <div class="feat-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+          </svg>
+        </div>
+        <div>
+          <div class="feat-label">100% தூய பட்டு</div>
+          <div class="feat-sublabel">உயர்தர காஞ்சிபுரம்<br>பட்டு சேலைகள்</div>
+        </div>
+      </div>
+      <div class="feat-item" id="feat-delivery">
+        <div class="feat-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <rect x="1" y="3" width="15" height="13" rx="2" />
+            <path d="M16 8h4l3 5v3h-7V8z" />
+            <circle cx="5.5" cy="18.5" r="2.5" />
+            <circle cx="18.5" cy="18.5" r="2.5" />
+          </svg>
+        </div>
+        <div>
+          <div class="feat-label">இலவச டெலிவரி</div>
+          <div class="feat-sublabel">₹5000க்கு மேல்<br>ஆர்டர்களுக்கு</div>
+        </div>
+      </div>
+      <div class="feat-item" id="feat-return">
+        <div class="feat-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path
+              d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4" />
+          </svg>
+        </div>
+        <div>
+          <div class="feat-label">எளிய திரும்புதல்</div>
+          <div class="feat-sublabel">7 நாட்கள்<br>திரும்புதல் உரிமை</div>
+        </div>
+      </div>
+      <div class="feat-item" id="feat-support">
+        <div class="feat-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path
+              d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.57a19.79 19.79 0 01-3.07-8.67A2 2 0 012.18 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 8.09a16 16 0 006 6l1.45-1.45a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z" />
+          </svg>
+        </div>
+        <div>
+          <div class="feat-label">வாடிக்கையாளர் சேவை</div>
+          <div class="feat-sublabel">+91 98765 43210<br>தினமும் 9am–8pm</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Wishlist toggle
+    document.querySelectorAll('.wishlist-btn').forEach(btn => {
+      btn.addEventListener('click', function () {
+        this.classList.toggle('active');
+        const svg = this.querySelector('svg');
+        if (this.classList.contains('active')) {
+          svg.style.fill = '#e05c5c';
+          svg.style.stroke = '#e05c5c';
+        } else {
+          svg.style.fill = 'none';
+          svg.style.stroke = 'currentColor';
+        }
+      });
+    });
+
+    // Color swatch selection
+    document.querySelectorAll('.color-swatch').forEach(swatch => {
+      swatch.addEventListener('click', function () {
+        document.querySelectorAll('.color-swatch').forEach(s => s.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+
+    // Cart counter
+    let cartCount = 0;
+    const cartBadge = document.querySelector('.cart-badge');
+    document.querySelectorAll('.btn-add-cart').forEach(btn => {
+      btn.addEventListener('click', function () {
+        cartCount++;
+        cartBadge.textContent = cartCount;
+        const orig = this.textContent;
+        this.textContent = '✓ சேர்க்கப்பட்டது';
+        this.style.background = 'linear-gradient(135deg, #2e7d32, #1b5e20)';
+        setTimeout(() => {
+          this.textContent = orig;
+          this.style.background = '';
+        }, 1500);
+      });
+    });
+  </script>
+
+</body>
+
+</html>
